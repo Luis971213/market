@@ -31,7 +31,7 @@
 
     <form name="editUserForm" action="http://localhost/market/backend/users/update_user.php" method="POST">
 
-            <input type="hidden" name="uId" value="<?php echo $userId; ?>" disabled="true">
+            <input type="hidden" name="uId" value="<?php echo $userId; ?>" disable="true">
         <div class="mb-3">
             <label for="first_name" class="form-label">First name</label>
             <input type="text" class="form-control" id="first_name" name="first_name" value="<?php echo $fname;?>" required>

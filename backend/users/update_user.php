@@ -10,12 +10,16 @@
     $sql="UPDATE users SET 
         
         first_name='$fname',
-        last_name='$lname'
-        email='$email'
+        last_name='$lname',
+        email='$email',
         password='$password'
         WHERE id='$uId'
         ";
-    if($mysqli->query($sql) === true){
-        echo "<Script> alert('User has been updated')</Script>";
-        header("refresh:0; url=http://localhost/market/backend/users/list_users.php");
+    $result = $mysqli->query($sql);
+    if($result) {
+        
+            header("Location: http://localhost/market/backend/users/list_users.php");
+        
+    } else {
+        echo"Error: ".$mysqli->error."<br>".$sql;
     }
